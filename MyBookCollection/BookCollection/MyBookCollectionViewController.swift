@@ -36,6 +36,7 @@ class MyBookCollectionViewController: UICollectionViewController {
         return book.books.count
     }
     
+    // MARK: 셀 디자인
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBookCollectionViewCell", for: indexPath) as! MyBookCollectionViewCell
         let url = URL(string: BookInfo().books[indexPath.row].cover)
@@ -49,6 +50,7 @@ class MyBookCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    //MARK: 라이브러리 적용
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBookCollectionViewCell", for: indexPath) as! MyBookCollectionViewCell
         

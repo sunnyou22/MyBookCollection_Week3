@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: 구조체로만들어 BookInfo를 구성할 수 있는 밑바탕 만들기
 // 별도로 같은 종류의 정보를 모아서 담아두기 좋음
 struct Book {
     var title: String
@@ -14,6 +15,7 @@ struct Book {
     var grade: Double
 }
 
+//MARK: BookList 구조체로 담기
 // 애셋말고 링크로 연결해보기
 // 만약에 연결된 링크에 이미지가 사라지면 사라지는 것?
 struct BookInfo {

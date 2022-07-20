@@ -14,7 +14,7 @@ class MyBookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var gradeLabel: UILabel!
     
-    
+    //MARK: 중복되는 UI요소 묶기
     func configureCell(data: Book) {
         let backgroundColor: [UIColor] = [.gray, .blue, .orange, .brown, .purple]
         
