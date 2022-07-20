@@ -42,7 +42,7 @@ class MyBookCollectionViewController: UICollectionViewController {
         let cellIndex = book.books[indexPath.row]
         
 //        cell.titleLabel.text = cellIndex.title -> configureCell로 쓴다면? 아래코드
-        cell.configureCell(data: cellIndex, index: indexPath.row)
+        cell.configureCell(data: cellIndex)
         cell.bookImage.kf.setImage(with: url) // import까먹지 말자
         cell.gradeLabel.text = "\(cellIndex.grade)"
 
@@ -55,7 +55,7 @@ class MyBookCollectionViewController: UICollectionViewController {
         
         // 이걸 불러오지 않으면 스토리보드상의 레이블이 나옴
         // 함수는 호출하고 실행하면 메모리에서 해제되기 때문일까
-        cell.configureCell(data: book.books[indexPath.row], index: indexPath.row)
+        cell.configureCell(data: book.books[indexPath.row])
         self.view.makeToast("\(cell.titleLabel.text!)로 이동합니다", duration: 2, position: .center)
     }
 }
