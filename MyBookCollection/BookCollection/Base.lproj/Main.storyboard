@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skH-bt-o59">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -64,7 +63,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85p-l7-TDD">
-                                                    <rect key="frame" x="20" y="173" width="27.5" height="16"/>
+                                                    <rect key="frame" x="20" y="173" width="19.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,7 +77,6 @@
                                                 <constraint firstItem="85p-l7-TDD" firstAttribute="leading" secondItem="hWJ-m5-Rmm" secondAttribute="leading" constant="20" id="RSF-3H-sh7"/>
                                                 <constraint firstItem="kJg-qO-j50" firstAttribute="leading" secondItem="hWJ-m5-Rmm" secondAttribute="leading" constant="16" id="RWT-tF-Wj8"/>
                                                 <constraint firstAttribute="trailing" secondItem="aMW-58-nzp" secondAttribute="trailing" constant="16" id="cKg-OV-F9T"/>
-                                                <constraint firstItem="aMW-58-nzp" firstAttribute="leading" secondItem="85p-l7-TDD" secondAttribute="trailing" constant="20" id="fuU-DT-EBO"/>
                                                 <constraint firstItem="aMW-58-nzp" firstAttribute="width" secondItem="kJg-qO-j50" secondAttribute="width" multiplier="0.686585" id="gMY-aq-LAv"/>
                                                 <constraint firstItem="kJg-qO-j50" firstAttribute="top" secondItem="hWJ-m5-Rmm" secondAttribute="top" constant="20" id="jSh-mU-CgO"/>
                                             </constraints>
@@ -91,7 +89,6 @@
                                         <constraint firstAttribute="bottom" secondItem="hWJ-m5-Rmm" secondAttribute="bottom" id="ghO-oj-mte"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="196" height="205"/>
                                 <connections>
                                     <outlet property="bookImage" destination="aMW-58-nzp" id="X6k-bZ-JaI"/>
                                     <outlet property="gradeLabel" destination="85p-l7-TDD" id="hLw-VA-Ct1"/>

@@ -11,14 +11,14 @@
  */
 
 import UIKit
-
+import Kingfisher
 class MyBookCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
-        let setionInset:CGFloat = 16
-        let width = UIScreen.main.bounds.width / 2 - (spacing + (setionInset * 2))
+        let setionInset: CGFloat = 16
+        let width = UIScreen.main.bounds.width - (spacing + (setionInset * 2))
         layout.itemSize = CGSize(width: width / 2, height: width / 2)
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: setionInset, left: setionInset, bottom: setionInset, right: setionInset)
@@ -32,5 +32,18 @@ class MyBookCollectionViewController: UICollectionViewController {
         let book = BookInfo()
         
         return book.books.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBookCollectionViewCell", for: indexPath) as! MyBookCollectionViewCell
+        let url = URL(string: BookInfo().books[indexPath.row].cover)
+        let cellIndex = BookInfo().books[indexPath.row]
+        
+//        cell.titleLabel.text = cellIndex.title -> configureCell로 쓴다면?
+        cell.configureCell(data: cellIndex)
+        cell.bookImage.kf.setImage(with: url) // import까먹지 말자
+        cell.gradeLabel.text = "\(cellIndex.grade)"
+        
+        return cell
     }
 }
