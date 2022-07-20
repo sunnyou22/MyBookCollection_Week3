@@ -15,6 +15,7 @@ import Kingfisher
 import Toast
 
 class MyBookCollectionViewController: UICollectionViewController {
+    var book = BookInfo()
     
     override func viewDidLoad() {
         let layout = UICollectionViewFlowLayout()
@@ -31,16 +32,14 @@ class MyBookCollectionViewController: UICollectionViewController {
     
     //MARK: 셀 개수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let book = BookInfo()
-        
         return book.books.count
     }
     
     // MARK: 셀 디자인
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBookCollectionViewCell", for: indexPath) as! MyBookCollectionViewCell
-        let url = URL(string: BookInfo().books[indexPath.row].cover)
-        let cellIndex = BookInfo().books[indexPath.row]
+        let url = URL(string: book.books[indexPath.row].cover)
+        let cellIndex = book.books[indexPath.row]
         
 //        cell.titleLabel.text = cellIndex.title -> configureCell로 쓴다면? 아래코드
         cell.configureCell(data: cellIndex)
@@ -56,7 +55,7 @@ class MyBookCollectionViewController: UICollectionViewController {
         
         // 이걸 불러오지 않으면 스토리보드상의 레이블이 나옴
         // 함수는 호출하고 실행하면 메모리에서 해제되기 때문일까
-        cell.configureCell(data: BookInfo().books[indexPath.row])
+        cell.configureCell(data: book.books[indexPath.row])
         self.view.makeToast("\(cell.titleLabel.text!)로 이동합니다", duration: 2, position: .center)
     }
 }
