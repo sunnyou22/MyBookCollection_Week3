@@ -93,6 +93,7 @@
                                     <outlet property="bookImage" destination="aMW-58-nzp" id="X6k-bZ-JaI"/>
                                     <outlet property="gradeLabel" destination="85p-l7-TDD" id="hLw-VA-Ct1"/>
                                     <outlet property="titleLabel" destination="kJg-qO-j50" id="O9P-AL-2u6"/>
+                                    <outlet property="view" destination="hWJ-m5-Rmm" id="6Dw-uK-iom"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
