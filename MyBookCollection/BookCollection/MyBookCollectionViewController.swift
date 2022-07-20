@@ -12,8 +12,10 @@
 
 import UIKit
 import Kingfisher
-class MyBookCollectionViewController: UICollectionViewController {
+import Toast
 
+class MyBookCollectionViewController: UICollectionViewController {
+    
     override func viewDidLoad() {
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
@@ -39,11 +41,20 @@ class MyBookCollectionViewController: UICollectionViewController {
         let url = URL(string: BookInfo().books[indexPath.row].cover)
         let cellIndex = BookInfo().books[indexPath.row]
         
-//        cell.titleLabel.text = cellIndex.title -> configureCell로 쓴다면?
+//        cell.titleLabel.text = cellIndex.title -> configureCell로 쓴다면? 아래코드
         cell.configureCell(data: cellIndex)
         cell.bookImage.kf.setImage(with: url) // import까먹지 말자
         cell.gradeLabel.text = "\(cellIndex.grade)"
-        
+
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyBookCollectionViewCell", for: indexPath) as! MyBookCollectionViewCell
+        
+        // 이걸 불러오지 않으면 스토리보드상의 레이블이 나옴
+        // 함수는 호출하고 실행하면 메모리에서 해제되기 때문일까
+        cell.configureCell(data: BookInfo().books[indexPath.row])
+        self.view.makeToast("\(cell.titleLabel.text!)로 이동합니다", duration: 2, position: .center)
     }
 }
