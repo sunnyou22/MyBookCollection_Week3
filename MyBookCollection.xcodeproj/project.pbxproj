@@ -15,6 +15,7 @@
 		90A3B45E2887E8C7001F5ACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A3B45C2887E8C7001F5ACB /* LaunchScreen.storyboard */; };
 		90A3B4662887EB12001F5ACB /* MyBookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A3B4652887EB12001F5ACB /* MyBookCollectionViewController.swift */; };
 		90A3B4692887EB41001F5ACB /* MyBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A3B4682887EB41001F5ACB /* MyBookCollectionViewCell.swift */; };
+		90A3B46B2887F411001F5ACB /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A3B46A2887F411001F5ACB /* BookData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		90A3B45F2887E8C7001F5ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90A3B4652887EB12001F5ACB /* MyBookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookCollectionViewController.swift; sourceTree = "<group>"; };
 		90A3B4682887EB41001F5ACB /* MyBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		90A3B46A2887F411001F5ACB /* BookData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				90A3B4652887EB12001F5ACB /* MyBookCollectionViewController.swift */,
 				90A3B4682887EB41001F5ACB /* MyBookCollectionViewCell.swift */,
+				90A3B46A2887F411001F5ACB /* BookData.swift */,
 				90A3B4572887E8C6001F5ACB /* Main.storyboard */,
 			);
 			path = BookCollection;
@@ -154,6 +157,7 @@
 			files = (
 				90A3B4692887EB41001F5ACB /* MyBookCollectionViewCell.swift in Sources */,
 				90A3B4562887E8C6001F5ACB /* ViewController.swift in Sources */,
+				90A3B46B2887F411001F5ACB /* BookData.swift in Sources */,
 				90A3B4522887E8C6001F5ACB /* AppDelegate.swift in Sources */,
 				90A3B4542887E8C6001F5ACB /* SceneDelegate.swift in Sources */,
 				90A3B4662887EB12001F5ACB /* MyBookCollectionViewController.swift in Sources */,
@@ -311,7 +315,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,7 +344,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

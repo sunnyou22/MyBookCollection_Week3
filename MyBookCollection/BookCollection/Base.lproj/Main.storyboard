@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skH-bt-o59">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eoI-D3-jTZ">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eoI-D3-jTZ">
                             <size key="itemSize" width="196" height="205"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -93,7 +93,7 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="196" height="205"/>
                                 <connections>
-                                    <outlet property="bookCover" destination="aMW-58-nzp" id="X6k-bZ-JaI"/>
+                                    <outlet property="bookImage" destination="aMW-58-nzp" id="X6k-bZ-JaI"/>
                                     <outlet property="gradeLabel" destination="85p-l7-TDD" id="hLw-VA-Ct1"/>
                                     <outlet property="titleLabel" destination="kJg-qO-j50" id="O9P-AL-2u6"/>
                                 </connections>
@@ -104,7 +104,6 @@
                             <outlet property="delegate" destination="skH-bt-o59" id="gdj-Cf-4As"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="VQY-MF-i7Q"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHO-Xe-ohE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
