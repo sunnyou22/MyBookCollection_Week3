@@ -67,15 +67,16 @@ class MyBookCollectionViewController: UICollectionViewController {
         // 이걸 불러오지 않으면 스토리보드상의 레이블이 나옴
         // 함수는 호출하고 실행하면 메모리에서 해제되기 때문일까
         cell.configureCell(data: book.books[indexPath.row])
-        
-        self.view.makeToast("\(cell.titleLabel.text!)로 이동합니다", duration: 2, position: .center)
         let sb = UIStoryboard(name: "Main", bundle: nil) // 내가 채택한 스토리보드
         //        let root = sb.instantiateViewController(withIdentifier: "MyBookCollectionViewController")
         let vc = sb.instantiateViewController(withIdentifier: BookDetailViewController.identifier) as! BookDetailViewController
         // 차일드뷰의 identifier을 지정해줘야함
         //        let nav = UINavigationController(rootViewController: root)
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        self.view.makeToast("👉\(cell.titleLabel.text!)👉로 이동합니다", duration: 0.7, position: .center) { _ in
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
-    @IBAction func doUnwind(segue: UIStoryboardSegue) {}
+//    @IBAction func doUnwind(segue: UIStoryboardSegue) {}
 }
