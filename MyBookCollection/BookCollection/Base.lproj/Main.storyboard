@@ -111,7 +111,7 @@
         <!--Book Detail View Controller-->
         <scene sceneID="Ju6-jz-yHM">
             <objects>
-                <viewController storyboardIdentifier="BookDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WFK-nk-q2M" customClass="BookDetailViewController" customModule="MyBookCollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookDetailViewController" id="WFK-nk-q2M" customClass="BookDetailViewController" customModule="MyBookCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWa-V0-IZS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
