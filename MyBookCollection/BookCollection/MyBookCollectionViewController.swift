@@ -73,6 +73,7 @@ class MyBookCollectionViewController: UICollectionViewController {
         // 차일드뷰의 identifier을 지정해줘야함
         //        let nav = UINavigationController(rootViewController: root)
         
+        // 컴플리션의 타입은 클로저임
         self.view.makeToast("👉\(cell.titleLabel.text!)👉로 이동합니다", duration: 0.7, position: .center) { _ in
             self.navigationController?.pushViewController(vc, animated: true)
         }
